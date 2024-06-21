@@ -1,0 +1,226 @@
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f0f0f0;
+transition: opacity 1s;
+}
+
+.welcome-container, .about-container {
+display: none;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #B9B9FF;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.pattern-background {
+position: relative;
+z-index: 1;
+}
+
+.heart-pattern, .diamond-pattern {
+position: absolute;
+width: 50px;
+height: 50px;
+background-size: contain;
+background-repeat: no-repeat;
+opacity: 0.5;
+}
+
+.heart-pattern {
+top: 20px;
+left: 20px;
+background-image: url('https://www.example.com/heart.png'); /* 替換成愛心圖片的URL */
+}
+
+.diamond-pattern {
+bottom: 20px;
+right: 50px;
+background-image: url(''); /* 替換成菱形圖片的URL */
+}
+
+.navbar {
+background-color: #B9B9FF;
+padding: 10px;
+display: flex;
+justify-content: space-around;
+}
+
+.nav-btn {
+background-color: transparent;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+font-size: 16px;
+color: white;
+}
+
+.submit-btn {
+  background-color: #B9B9FF;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+}
+
+.submit-btn:hover{
+  background-color: #a1a1ff;
+}
+
+.nav-btn:hover {
+background-color: #a1a1ff;
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #B9B9FF;
+box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+z-index: 1;
+}
+
+.dropdown-content .sub-btn {
+background-color: transparent;
+border: none;
+padding: 12px 16px;
+text-align: left;
+width: 100%;
+box-sizing: border-box;
+cursor: pointer;
+font-size: 16px;
+color: white;
+}
+
+.dropdown-content .sub-btn:hover {
+background-color: #a1a1ff;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.content {
+padding: 20px;
+display: none;
+text-align: center;
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+background-color: #ECECFF; /* 添加背景色 */
+border-radius: 10px; /* 添加圆角 */
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+max-width: 80%; /* 最大宽度为页面的 80% */
+margin: 20px auto; /* 垂直居中 */
+}
+
+.content.active {
+display: block;
+opacity: 1;
+}
+
+textarea {
+width: 80%;
+height: 100px;
+padding: 10px;
+margin: 20px 0;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 5px;
+resize: none;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+textarea:focus {
+outline: none;
+border-color: #a1a1ff;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    background-color: #B9B9FF;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #a1a1ff;
+}
+.social-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+}
+
+.icon {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.book-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+
+.left {
+    height: 300px;
+    order: 1;
+}
+
+.right {
+    order: 2;
+}
+
+.divider {
+    width: 80%;
+    margin: 20px;
+    border: 1px dashed #ccc;
+}
+.scrollable {
+    width: 100%; /* 區域寬度 */
+    height: 100%; /* 區域高度 */
+    overflow: auto; /* 啟用滾動條 */
+    scrollbar-width: thin; /* 滾動條寬度 */
+    scrollbar-color: #6A6AFF transparent; /* 滾動條顏色 */
+}
+
+/* 隱藏默認滾動條 */
+.scrollable::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    width: 100%; /* 內容寬度 */
+    height: 100%; /* 內容高度 */
+    background-color: #f0f0f0; /* 內容背景色 */
+}
